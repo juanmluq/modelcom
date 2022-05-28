@@ -1,4 +1,8 @@
 import axios from 'axios';
+export const GET_ALL_PRODUCTS = 'GET_ALL_PRODUCTS';
+export const GET_PRODUCT_DETAIL ='GET_PRODUCT_DETAIL';
+export const CREATE_PRODUCT = 'CREATE_PRODUCT';
+export const DELETE_PRODUCT = 'DELETE_PRODUCT';
 
 // Recuerden inicializar la variable de idProduct.
 
@@ -19,17 +23,35 @@ export const getAllProducts = () => {
     // Aca debes hacer la petición a la ruta del back http://localhost:3001/products
     // Pueden hacer la peticion con fetch o axios (documentación de axios: https://axios-http.com/docs/example)
     // Aclaración: todas las peticiones al back son asíncronas.
-    
+    return (axios("http://localhost:3001/products")
+    .then(response => dispatch({type: GET_ALL_PRODUCTS, payload: response.data})))
   };
 };
 
 export const getProductDetail = (id) => {
   return async (dispatch) => {
     // Aca debes hacer la petición a la ruta del back http://localhost:3001/products/:id
+  return (axios(`http://localhost:3001/products/${id}`)
+  .then(response => dispatch ({type: GET_PRODUCT_DETAIL, payload: response.data})))
   };
 };
 
 // Desde el componente correspondiente ejecutamos esta action creator, pasandole por params las values que vamos a usar para
-export const createProduct = undefined;
+let id= 6;
 
-export const deleteProduct = undefined;
+export const createProduct = (payload) => {
+  return {
+    type: CREATE_PRODUCT,
+    payload: {
+      ...payload,
+      id: id++
+    }
+  }
+};
+
+export const deleteProduct = (id) => {
+  return {
+    type: DELETE_PRODUCT,
+    payload: id
+  }
+};
