@@ -1,0 +1,12 @@
+.proDet {
+    border: 1px solid var(--border-color);
+    border-radius: 1rem; 
+     /* 1 rem es igual a 16 px */
+    font-size: 100%;
+    color: #5E6164;
+    padding: 1rem;
+    text-align: left;
+    font-family: 'Pacifico', cursive;
+    width: 75%;
+
+}

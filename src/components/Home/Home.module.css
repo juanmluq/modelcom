@@ -1,0 +1,22 @@
+.proDetd {
+
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    margin: 1rem;
+    text-align: center;
+}
+
+.proDetd > section {
+    /* con esto digo que quiero editar la seccion que esta adentro de .profetd */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    /* esto ultimo soluciona el tema de las 2 columnas de la pagina. 
+    En este caso es para que se acomode en 3 columnas y "auto" es para que
+     sea automatico pero tambien puedo ponerlo en fracciones "1fr" , "2fr" , 
+     "3fr" , etc*/
+    width: 100%;
+    justify-content: center;
+} 

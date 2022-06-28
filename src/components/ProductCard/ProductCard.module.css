@@ -1,0 +1,29 @@
+.proBtn {
+    position: relative;
+    /* dice que desde arriba se mueva 0.25rem */
+    top: 0.25rem; 
+    right: 0.25rem;
+  /* cuando selecciono el cursor se activa la siguiente accion en este caso la manito */
+   cursor:pointer;
+   color: beige;
+   /* tengo que poner el background color con una variable sino no funciona la transition */
+  background-color: var(--btn-bkg-danger);
+  /* cuando selecciono el boton cambia el color despues de 250 milisegundos */
+  transition: background-color 250ms;
+
+}
+
+.datosProd {
+    margin: 1rem;
+    /* para que el borde se vea hay que poner solid */
+    border: 2px solid;
+    padding: 1rem;
+    border-color: rgb(18, 19, 19);
+    border-radius: 1rem;
+    
+}
+
+.txt {
+    font-size: 2rem;
+    font-weight: 300;
+}

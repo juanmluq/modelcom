@@ -1,0 +1,32 @@
+.create {
+    padding: 2rem;
+    border: 1px solid;
+    /* width: fit-content;
+    height: 2rem;
+    display: flex;
+    border-radius: 0.5rem; */
+    display: flex; 
+    flex-direction: column;
+    gap: 0.5rem;  
+    margin: 1rem;
+}
+
+.input {
+    /* width: calc(25vw - 1.25rem - 5rem);  esto sirve para hacer un calculo y en este caso ocupar casi el ancho de la pantalla*/
+    color: black;
+}
+
+.input::placeholder{
+    color: white;
+} 
+
+.input:focus{
+    outline: none; 
+/* esto es para que al escribir no me ponga "nada raro" */
+}
+
+.submit {
+    border: solid 1px;
+    border-radius: 8px;
+    width: 10rem;
+}

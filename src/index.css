@@ -1,13 +1,40 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
+} */
+/* 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color:aquamarine; */
+  background-image: url("https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Teaser/picture-gallery-t.jpg"); 
+  /* con esto hago que no se repita la imagen en el body:
+   background-repeat: no-repeat; */
+  /* con lo siguiente le doy el tamaño de la imagen: 
+  background-size: cover; 
+  height: 100%; 
+  min-height: 100vh;*/
+  /* si quisiera bluriar la pagina (es decir cambiar una parte a una cierta opacidad distinta)
+   deberia hacer: 
+   backdrop-filter: blur(8px);
+   background-color: el color que quiera(ejemplo #0000040) */
+  
+}
+
+body, input {
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --border-color: #457b9d; 
+  /* se pone los 2 guiones para definir una variable */
+  --btn-bkg-danger: #1e97e2;
 }
