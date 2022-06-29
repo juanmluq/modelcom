@@ -97,7 +97,8 @@
     "test:06": "jest tests/06-CreateProduct.test.js",
     "test:07": "jest tests/07-ProductCard.test.js",
     "test:08": "jest tests/08-ProductDetail.test.js",
-    "server": "json-server -p 3001 --watch db.json"
+    "server": "json-server -p 3001 --watch db.json",
+    "build": "webpack" 
   },
   "eslintConfig": {
     "extends": [
